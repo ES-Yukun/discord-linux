@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc; cd dist; node ."
+    "start": "npm i ;npx tsc; cd dist; node ."
   },
   "repository": {
     "type": "git",
