@@ -68,15 +68,21 @@ cli.on("messageCreate", (msg) => __awaiter(void 0, void 0, void 0, function* () 
         return;
     if (!msg.guild)
         return;
+    if (!msg.member)
+        return;
     if (msg.channel.type == Discord.ChannelType.GuildText) {
-        let res = msg.content.match(/(rm )([1-9]*[0-9])/);
-        if (res == null)
-            return;
-        let num = Number(res[2]);
-        if (num) {
-            msg.channel.bulkDelete(num);
-        }
+        if (!msg.member.roles.cache.find((r) => r.name == "staff"))
+            : ;
     }
 }));
+return;
+let res = msg.content.match(/(rm )([1-9]*[0-9])/);
+if (res == null)
+    return;
+let num = Number(res[2]);
+if (num) {
+    msg.channel.bulkDelete(num);
+}
+;
 cli.login();
 //# sourceMappingURL=index.js.map
