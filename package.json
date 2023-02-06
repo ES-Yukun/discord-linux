@@ -1,0 +1,25 @@
+{
+  "name": "discord-linux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ES-Yukun/discord-linux.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ES-Yukun/discord-linux/issues"
+  },
+  "homepage": "https://github.com/ES-Yukun/discord-linux#readme",
+  "dependencies": {
+    "@types/node": "^18.11.19",
+    "discord.js": "^14.7.1",
+    "typescript": "^4.9.5"
+  }
+}
