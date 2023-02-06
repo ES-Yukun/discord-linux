@@ -34,9 +34,11 @@ cli.on("ready", async () => {
 cli.on("messageCreate", async (msg) => {
   if (msg.author.bot) return;
   if (!msg.guild) return;
+  if (!msg.member) return;
   if (msg.channel.type == Discord.ChannelType.GuildText) {
+    if (!msg.member.roles.cache.find((r) => r.name == "staff"):) return;
     let res = msg.content.match(/(rm )([1-9]*[0-9])/);
-    if (res == null) return
+    if (res == null) return;
     let num = Number(res[2]);
     if (num) {
       msg.channel.bulkDelete(num);
